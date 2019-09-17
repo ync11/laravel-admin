@@ -1,0 +1,39 @@
+var gulp = require('gulp');
+// 拷贝任何需要的文件
+gulp.task("copyfiles", done => {
+    gulp.src("node_modules/admin-lte/dist/css/AdminLTE.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/bower_components/font-awesome/css/font-awesome.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/bower_components/Ionicons/css/ionicons.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/dist/css/skins/_all-skins.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/dist/css/skins/skin-blue.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/bower_components/bootstrap/dist/css/bootstrap.min.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/bower_components/jquery/dist/jquery.min.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/bower_components/jquery-ui/jquery-ui.min.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/dist/js/adminlte.min.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/dist/js/demo.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js")
+        .pipe(gulp.dest("public/assets/js"));
+    gulp.src("node_modules/admin-lte/bower_components/bootstrap/fonts/**")
+        .pipe(gulp.dest("public/assets/fonts"));
+    gulp.src("node_modules/admin-lte/bower_components/font-awesome/fonts/**")
+        .pipe(gulp.dest("public/assets/fonts"));
+    gulp.src("node_modules/admin-lte/dist/img/**")
+        .pipe(gulp.dest("public/assets/img"));
+    gulp.src("node_modules/admin-lte/plugins/iCheck/square/blue.css")
+        .pipe(gulp.dest("public/assets/css"));
+    gulp.src("node_modules/admin-lte/plugins/iCheck/icheck.min.js")
+        .pipe(gulp.dest("public/assets/js"));
+    done();
+});
